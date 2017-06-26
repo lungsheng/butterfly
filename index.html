@@ -2,89 +2,43 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>jQuery Mobile 網路應用程式</title>
 <link href="js/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
 <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="js/jquery.mobile-1.0.min.js" type="text/javascript"></script>
-<script>
-$(function(){
-	var title=["琉璃翠鳳蝶","無尾白紋鳳蝶","弄蝶","台灣琉璃小灰蝶","大鳳蝶","柑橘鳳蝶","黑端豹斑蝶"];
-	var total=title.length;
-	var picnumb=0;
-	var mainpicstr="";
-var colnumb=2;
-	var le=title.length;
-	var file=["a","b","c","d","e","f","g"];
-	var s="";
-	var ms1="<div class='ui-block-a' align='center' id='b'><a href='";
-    var ms1p="' target='_self'><img src='";
-	
-	var ms2="<div class='ui-block-b' align='center' id='b'><a href='"
-	//var ms2p="' ><img src='";
-	//var ms3="<div class='ui-block-c' align='center' ><a href='#' ><img src='imgs/a";
-	var msh="/imgs/a1.jpg'></a>";
-	
-	var mshend="</div>";
-	//alert(total);
-for(var i=1;i<=total;i++){
-	
-	if(i%colnumb==1){
-	s1=ms1+file[i-1]+"/index.html"+ms1p+file[i-1]+msh;
-		s+=s1+title[i-1]+mshend;};
-	//if(i%3==2){
-		//s1=ms2+i+msh;
-		//s+=s1};
-	if(i%colnumb==0){
-		s1=ms2+file[i-1]+"/index.html"+ms1p+file[i-1]+msh;
-		s+=s1+title[i-1]+mshend};
-	}
-	//alert(s);
-	$("#mainpics").html(s);
-//alert(questring);
-
-    
-	//alert(picnumb);
-	
-})
-</script>
 <style>
-a img {
-width:95%;
-height:65%;
-border: #9C0 solid 5px;
-border-radius:10px;
+a img{
+	border:#FF9 10px solid;
+	margin:10px;
+	width:20%;
+	height:80%;
 }
-#maintext {font-size:18px;
-font-family:"微軟正黑體";
-border:solid #FC0 3px;
-border-radius:5px;
-}
-#title1{
-	font-family:"微軟正黑體";
-	margin:8px;
-	font-size:25px;}
-#b{
-	font-family:"微軟正黑體";
-	font-weight:200;
-	font-size:25px;
-	color:#333;
+li a div{
+font-size:30px;
+color:#069;
+	}
+h1 div{
+	font-size:30px;
+	color:#F60;
 	}
 </style>
+
 </head> 
 <body> 
 
-<div data-role="page" id="page" data-theme="b">
+<div data-role="page" id="page" data-theme="a">
 	<div data-role="header" data-theme="e">
-	<h1 id="title1">芎林蝴蝶</h1>
+		<h1><div>芎林蝴蝶</div></h1>
 	</div>
-	<div data-role="content">
-    <div id="maintext" ></div>	<p>
-	<div class="ui-grid-a" id="mainpics">
-    
-     
+	<div data-role="content">	
+		<ul data-role="listview" data-inset='true' data-theme='e'>
+			<li><a href="indexios.html" target="_self"><img src=a/imgs/a1.jpg><div>使用-apple系統</div></a></li>			
+   <li><a href="butterflygoo/index.html" target="_self"><img src=e/imgs/a1.jpg><div>使用-google系統</div></a></li>
+ 
+		</ul>		
 	</div>
 	<div data-role="footer" data-theme="e">
-		<h4>Dragon</h4>
+		<h4>by Dragon</h4>
 	</div>
 </div>
 
